@@ -28,7 +28,7 @@ class GAppTheme {
 
   static ThemeData customDarkTheme = ThemeData(
       useMaterial3: true,
-      fontFamily: 'Poppins ',
+      fontFamily: 'Poppins',
       scaffoldBackgroundColor: Colors.black,
       brightness: Brightness.dark,
       primaryColor: Colors.blue,
