@@ -32,7 +32,6 @@ class GLocalStorage {
   }
 }
 
-
 /// *** *** *** *** *** Example *** *** *** *** *** ///
 
 // LocalStorage localStorage = LocalStorage();
@@ -49,4 +48,3 @@ class GLocalStorage {
 //
 // // Clear all data
 // localStorage.clearAll();
-

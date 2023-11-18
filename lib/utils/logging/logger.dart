@@ -20,6 +20,6 @@ class GLoggerHelper {
   }
 
   static void error(String message, [dynamic error]) {
-    _logger.e(message, error: error,  stackTrace: StackTrace.current);
+    _logger.e(message, error: error, stackTrace: StackTrace.current);
   }
 }

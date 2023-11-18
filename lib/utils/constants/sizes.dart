@@ -1,4 +1,3 @@
-
 class GSizes {
   GSizes._();
   // Padding and margin sizes
@@ -69,6 +68,3 @@ class GSizes {
   // Grid view spacing
   static const double gridViewSpacing = 16.0;
 }
-
-
-
