@@ -1,3 +1,4 @@
+import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/theme/custom_themes/app_bar_theme.dart';
 import 'package:ecommerce/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:ecommerce/utils/theme/custom_themes/checkbox_theme.dart';
@@ -14,9 +15,9 @@ class GAppTheme {
   static ThemeData customLightTheme = ThemeData(
       useMaterial3: true,
       fontFamily: 'Poppins',
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: GColors.light,
       brightness: Brightness.light,
-      primaryColor: Colors.blue,
+      primaryColor: GColors.primary,
       textTheme: GTextTheme.lightTextTheme,
       elevatedButtonTheme: GElevatedButtonTheme.lightElevatedButtonTheme,
       appBarTheme: GAppBarTheme.lightAppBarTheme,
@@ -29,9 +30,9 @@ class GAppTheme {
   static ThemeData customDarkTheme = ThemeData(
       useMaterial3: true,
       fontFamily: 'Poppins',
-      scaffoldBackgroundColor: Colors.black,
+      scaffoldBackgroundColor: GColors.dark,
       brightness: Brightness.dark,
-      primaryColor: Colors.blue,
+      primaryColor: GColors.primary,
       textTheme: GTextTheme.darkTextTheme,
       elevatedButtonTheme: GElevatedButtonTheme.darkElevatedButtonTheme,
       appBarTheme: GAppBarTheme.darkAppBarTheme,

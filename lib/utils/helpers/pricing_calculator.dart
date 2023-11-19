@@ -1,4 +1,6 @@
 class GPricingCalculator {
+  GPricingCalculator._();
+
   /// -- Calculate Price based on tax and shipping
   static double calculateTotalPrice(double productPrice, String location) {
     double taxRate = getTaxRateForLocation(location);
