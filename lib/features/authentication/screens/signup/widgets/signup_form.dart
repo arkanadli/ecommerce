@@ -1,16 +1,32 @@
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
+import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class signup_form extends StatelessWidget {
+class signup_form extends StatefulWidget {
   const signup_form({
     super.key,
   });
 
   @override
+  State<signup_form> createState() => _signup_formState();
+}
+
+class _signup_formState extends State<signup_form> {
+  late bool checkboxValue;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    checkboxValue = false;
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final isDarkMode = GHelperFunctions.isDarkMode(context);
     return Column(
       children: [
         Row(
@@ -74,8 +90,11 @@ class signup_form extends StatelessWidget {
             SizedBox(
               width: 24,
               child: Checkbox(
-                value: false,
-                onChanged: (value) {},
+                value: checkboxValue,
+                onChanged: (value) {
+                  checkboxValue = !checkboxValue;
+                  setState(() {});
+                },
               ),
             ),
             const SizedBox(
@@ -92,9 +111,10 @@ class signup_form extends StatelessWidget {
                   TextSpan(
                     text: '${GTexts.privacyPolicy} ',
                     style: Theme.of(context).textTheme.bodyMedium!.apply(
-                          color: GColors.primary,
+                          color: isDarkMode ? GColors.white : GColors.primary,
                           decoration: TextDecoration.underline,
-                          decorationColor: GColors.primary,
+                          decorationColor:
+                              isDarkMode ? GColors.white : GColors.primary,
                         ),
                   ),
                   const TextSpan(
@@ -103,9 +123,10 @@ class signup_form extends StatelessWidget {
                   TextSpan(
                     text: '${GTexts.termsOfUse} ',
                     style: Theme.of(context).textTheme.bodyMedium!.apply(
-                          color: GColors.primary,
+                          color: isDarkMode ? GColors.white : GColors.primary,
                           decoration: TextDecoration.underline,
-                          decorationColor: GColors.primary,
+                          decorationColor:
+                              isDarkMode ? GColors.white : GColors.primary,
                         ),
                   ),
                 ],

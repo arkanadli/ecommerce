@@ -8,6 +8,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/login_signup/divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
+import 'widgets/signup_button.dart';
 import 'widgets/signup_form.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -16,7 +17,10 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('sss'),
+        
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(GSizes.defaultSpace),
@@ -28,23 +32,13 @@ class SignUpScreen extends StatelessWidget {
                 GTexts.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              const SizedBox(
-                height: GSizes.spaceBtwSections,
-              ),
+              const SizedBox(height: GSizes.spaceBtwSections),
 
               // form input, remember me and forgot pass
-              signup_form(),
-              const SizedBox(
-                height: GSizes.spaceBtwSections,
-              ),
+              const signup_form(),
+              const SizedBox(height: GSizes.spaceBtwSections),
               // Sign Up Button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  child: const Text(GTexts.createAccount),
-                  onPressed: () {},
-                ),
-              ),
+              const signup_button(),
               // divider
               const SizedBox(height: GSizes.spaceBtwSections),
               const FormDivider(textTitle: GTexts.orSignUpWith),
