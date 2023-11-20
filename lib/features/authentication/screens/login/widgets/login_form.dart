@@ -1,6 +1,8 @@
+import 'package:ecommerce/features/authentication/screens/signup/signup.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginForm extends StatefulWidget {
@@ -94,7 +96,9 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(
               width: double.maxFinite,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(const SignUpScreen());
+                },
                 child: const Text(GTexts.createAccount),
               ),
             ),
