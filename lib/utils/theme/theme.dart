@@ -15,7 +15,7 @@ class GAppTheme {
   static ThemeData customLightTheme = ThemeData(
       useMaterial3: true,
       fontFamily: 'Poppins',
-      scaffoldBackgroundColor: GColors.light,
+      scaffoldBackgroundColor: Colors.white,
       brightness: Brightness.light,
       primaryColor: GColors.primary,
       textTheme: GTextTheme.lightTextTheme,
@@ -30,7 +30,7 @@ class GAppTheme {
   static ThemeData customDarkTheme = ThemeData(
       useMaterial3: true,
       fontFamily: 'Poppins',
-      scaffoldBackgroundColor: GColors.dark,
+      scaffoldBackgroundColor: Colors.black,
       brightness: Brightness.dark,
       primaryColor: GColors.primary,
       textTheme: GTextTheme.darkTextTheme,

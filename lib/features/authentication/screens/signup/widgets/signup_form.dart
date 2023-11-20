@@ -16,12 +16,14 @@ class signup_form extends StatefulWidget {
 
 class _signup_formState extends State<signup_form> {
   late bool checkboxValue;
+  late bool isObsecure;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     checkboxValue = false;
+    isObsecure = true;
   }
 
   @override
@@ -77,11 +79,18 @@ class _signup_formState extends State<signup_form> {
         ),
         const SizedBox(height: GSizes.spaceBtwInputFields),
         TextFormField(
-          obscureText: true,
-          decoration: const InputDecoration(
-            label: Text(GTexts.password),
-            prefixIcon: Icon(Iconsax.password_check),
-            suffixIcon: Icon(Iconsax.eye_slash),
+          obscureText: isObsecure,
+          decoration: InputDecoration(
+            label: const Text(GTexts.password),
+            prefixIcon: const Icon(Iconsax.password_check),
+            suffixIcon: IconButton(
+              icon: const Icon(Iconsax.eye_slash),
+              onPressed: () {
+                setState(() {
+                  isObsecure = !isObsecure;
+                });
+              },
+            ),
           ),
         ),
         const SizedBox(height: GSizes.spaceBtwItems),
