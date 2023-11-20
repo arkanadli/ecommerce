@@ -1,3 +1,5 @@
+import 'package:ecommerce/features/authentication/screens/password_configuration/forget_password.dart';
+import 'package:ecommerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:ecommerce/features/authentication/screens/signup/signup.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
@@ -74,7 +76,7 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 // Forget Password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPasswordScreen()),
                   child: const Text(GTexts.forgetPassword),
                 )
               ],
@@ -96,9 +98,7 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(
               width: double.maxFinite,
               child: OutlinedButton(
-                onPressed: () {
-                  Get.to(const SignUpScreen());
-                },
+                onPressed: () => Get.to(() => const SignUpScreen()),
                 child: const Text(GTexts.createAccount),
               ),
             ),
