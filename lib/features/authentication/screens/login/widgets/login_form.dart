@@ -1,6 +1,7 @@
 import 'package:ecommerce/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:ecommerce/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:ecommerce/features/authentication/screens/signup/signup.dart';
+import 'package:ecommerce/navigation_menu.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +89,7 @@ class _LoginFormState extends State<LoginForm> {
             SizedBox(
               width: double.maxFinite,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const NavigationMenu()),
                 child: const Text(GTexts.signIn),
               ),
             ),
